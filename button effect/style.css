@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Arial",sans-serif;
+    background: linear-gradient(to bottom right, #d9a7c7, #fffcdc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 18px 62px;
+    color: white;
+    background-color: #222;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+button span{
+    font-family: inherit;
+    position: relative;
+    z-index: 2;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 150%;
+    height: 160%;
+    background-color: purple;
+    z-index: 1;
+    transform-origin: bottom left;
+    transform: skew(40deg) translateX(-92%) translateY(40%);
+    transition: all 0.5s ease-in-out;
+}
+
+
+button:hover::after {
+    transform: skew(40deg) translateX(0%) translateY(10%);
+}
