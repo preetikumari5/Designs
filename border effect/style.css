@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Roboto",sans-serif;
+    background-color: whitesmoke;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    border: 0;
+    color: #ffffff;
+    background-color: #363837;
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 10%;
+    height: 25%;
+    background-color: transparent;
+    border-top: 1px solid #363837;
+    border-left: 1px solid #363837;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+
+.btn::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 10%;
+    height: 25%;
+    background-color: transparent;
+    border-bottom: 1px solid #363837;
+    border-right: 1px solid #363837;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.btn:hover::before {
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+}
+
+.btn:hover::after {
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+}
