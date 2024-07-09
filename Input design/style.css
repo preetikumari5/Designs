@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #232228;
+    font-family: "Poppins";
+}
+
+.search-box {
+    height: 50px;
+    width: 250px;
+    background: #232228;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box > label {
+    position: absolute;
+    left: 13px;
+    color: grey;
+    transform: translateY(13px);
+    transition: all 0.2s;
+}
+
+.search-box > input {
+    all: unset;
+    height: 38px;
+    width: 230px;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid grey;
+    font-size: 15px;
+}
+
+.search-box > input:focus, .search-box > input:valid {
+    border-color: #66C7D0;
+}
+
+.search-box input:focus ~ label, .search-box input:valid ~ label{
+    transform: translateY(-22px);
+    font-size: 12px;
+    background: #232228;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-left:1px solid #66C7D0;
+    border-right: 1px solid #66C7D0;
+    letter-spacing: 2px;
+    color: #66C7D0;
+}
