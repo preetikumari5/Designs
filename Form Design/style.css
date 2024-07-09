@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+:root {
+    --clr-primary : hsl(220, 49%, 29%);
+    --clr-text-dark : rgb(14,30,43);
+    --clr-text-light : rgba(14,30,43,0.3);
+    --clr-white : rgb(255,255,255);
+    --clr-bg: rgb(236,246,253);
+    --cle-accent : rgb(65,120,228);
+}
+ 
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sora";
+    background: linear-gradient(to  bottom right,
+    rgba(56,214,214,0.4) ,
+    rgba(54,9,109,0.4) );
+    /* url(matt-nelson-dCNGrp_0GyM-unsplash.jpg); */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 400px;
+    padding: 40px;
+    background-color: var(--clr-bg);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form h1 {
+    color: var(--clr-text-dark);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.form .form-group {
+    width: 95%;
+    color: var(--clr-white);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-group input, .sign-in-with, .form button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--clr-text-light);
+    color: var(--clr-text-light);
+    background-color: var(--clr-white);
+    width: 95%;
+    padding: 16px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: var(--clr-text-light);
+}
+
+.form button {
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--clr-white);
+    background-color: var(--clr-primary);
+}
+
+.or {
+    margin-block: 16px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sign-in-with{
+    margin-bottom: 15px;
+}
+.sign-in-with .img {
+    width: 22px;
+    height: 22px;
+}
+
+.sign-in-with + p {
+    margin-top: 16px;
+    font-weight: 600;
+    color: var(--clr-text-light);
+}
+
+.sign-in-with + p a{
+    text-decoration: none;
+    color: var(--cle-accent);
+}
