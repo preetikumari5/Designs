@@ -1,0 +1,29 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #1e1e1e;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    font-size: 64px;
+    font-weight: bold;
+    color: #bb86fc;
+    padding: 14px;
+    background: linear-gradient(currentColor 0 0) bottom left / 0% 3px no-repeat;
+    animation: load 3s linear infinite;
+}
+
+@keyframes load {
+    100% {
+        background-size: 100% 3px;
+    }
+}
